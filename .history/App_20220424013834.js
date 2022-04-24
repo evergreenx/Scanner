@@ -50,50 +50,48 @@ const App = () => {
     color: 'white',
     fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 20,
   };
   return (
     <NativeBaseProvider>
-      <Box flex={1} bgColor={'#404CCF'} pb={10}>
+      <Box flex={1} bgColor={'rgb(64,76,7)'} pb={10}>
         {/* <Image source={ReceiptsIcon} /> */}
 
-        <Box flex={1}  >
-          <Onboarding
-            showSkip={false}
-            showNext={false}
-            showDone={false}
-            bottomBarColor={'#404CCF'}
-            pages={[
-              {
-                // backgroundColor: 'blue',
-                image: <Image source={require('./assets/Receipts.png')} />,
+        <Onboarding
+          showSkip={false}
+          showNext={false}
+          showDone={false}
+          bottomBarColor={'blue'}
+          pages={[
+            {
+              backgroundColor: 'blue',
+              image: <Image source={require('./assets/Receipts.png')} />,
 
-                subtitle: '',
+              subtitle: '',
 
-                title: 'Say goodbye 👋 to paper receipts',
-                titleStyles: onBoardingTitleStyle,
-              },
 
-              {
-                // backgroundColor: 'blue',
-                image: <Image source={require('./assets/Chart.png')} />,
-                subtitle: '',
-                title: 'Monitor your daily spending ',
-                titleStyles: onBoardingTitleStyle,
-              },
+              title: 'Say goodbye 👋 to paper receipts',
+              titleStyles: onBoardingTitleStyle,
+            },
 
-              {
-                // backgroundColor: 'blue',
-                image: <Image source={require('./assets/Location.png')} />,
-                subtitle: '',
-                title: 'Easily access your receipts anywhere ',
-                titleStyles: onBoardingTitleStyle,
-              },
-            ]}
-          />
-        </Box>
+            {
+              backgroundColor: 'blue',
+              image: <Image source={require('./assets/Chart.png')} />,
+              subtitle: '',
+              title: 'Monitor your daily spending ',
+              titleStyles: onBoardingTitleStyle,
+            },
 
-        <View>
+            {
+              backgroundColor: 'blue',
+              image: <Image source={require('./assets/Location.png')} />,
+              subtitle: '',
+              title: 'Easily access your receipts anywhere ',
+              titleStyles: onBoardingTitleStyle,
+            },
+          ]}
+        />
+
+        <View >
           <Button mx={5} bg={'white'} py={3} block rounded={'xl'}>
             <Text color={'#404CCF'} fontSize="xl">
               Get Started
@@ -103,11 +101,10 @@ const App = () => {
           <Button
             mx={5}
             py={3}
-            bgColor={'blue'}
+           bgColor={'blue'}
             borderColor={'#fff'}
             block
             mt={5}
-            borderWidth={2}
             rounded={'xl'}>
             <Text color="#fff" fontSize="xl">
               Login

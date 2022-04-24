@@ -50,7 +50,6 @@ const App = () => {
     color: 'white',
     fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 20,
   };
   return (
     <NativeBaseProvider>

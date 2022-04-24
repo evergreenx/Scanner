@@ -57,7 +57,7 @@ const App = () => {
       <Box flex={1} bgColor={'#404CCF'} pb={10}>
         {/* <Image source={ReceiptsIcon} /> */}
 
-        <Box flex={1}  >
+        <Box flex={1} mb={4} >
           <Onboarding
             showSkip={false}
             showNext={false}

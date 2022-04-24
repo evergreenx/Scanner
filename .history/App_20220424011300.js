@@ -50,22 +50,21 @@ const App = () => {
     color: 'white',
     fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 20,
   };
   return (
     <NativeBaseProvider>
-      <Box flex={1} bgColor={'#404CCF'} pb={10}>
+      <Box bgColor={'blue.800'}>
         {/* <Image source={ReceiptsIcon} /> */}
 
-        <Box flex={1}  >
+        <Box px={5} flex={1}>
           <Onboarding
             showSkip={false}
             showNext={false}
             showDone={false}
-            bottomBarColor={'#404CCF'}
+            bottomBarColor={'blue'}
             pages={[
               {
-                // backgroundColor: 'blue',
+                backgroundColor: 'blue',
                 image: <Image source={require('./assets/Receipts.png')} />,
 
                 subtitle: '',
@@ -75,7 +74,7 @@ const App = () => {
               },
 
               {
-                // backgroundColor: 'blue',
+                backgroundColor: 'blue',
                 image: <Image source={require('./assets/Chart.png')} />,
                 subtitle: '',
                 title: 'Monitor your daily spending ',
@@ -83,7 +82,7 @@ const App = () => {
               },
 
               {
-                // backgroundColor: 'blue',
+                backgroundColor: 'blue',
                 image: <Image source={require('./assets/Location.png')} />,
                 subtitle: '',
                 title: 'Easily access your receipts anywhere ',
@@ -91,29 +90,21 @@ const App = () => {
               },
             ]}
           />
+
+          <View>
+            <Button bg={'white'} py={3} block rounded={'xl'}>
+              <Text color={'#404CCF'} fontSize="xl">
+                Get Started
+              </Text>
+            </Button>
+
+            <Button py={3} borderColor={'#fff'} block mt={5} rounded={'xl'}>
+              <Text color="#fff" fontSize="xl">
+                Login
+              </Text>
+            </Button>
+          </View>
         </Box>
-
-        <View>
-          <Button mx={5} bg={'white'} py={3} block rounded={'xl'}>
-            <Text color={'#404CCF'} fontSize="xl">
-              Get Started
-            </Text>
-          </Button>
-
-          <Button
-            mx={5}
-            py={3}
-            bgColor={'blue'}
-            borderColor={'#fff'}
-            block
-            mt={5}
-            borderWidth={2}
-            rounded={'xl'}>
-            <Text color="#fff" fontSize="xl">
-              Login
-            </Text>
-          </Button>
-        </View>
       </Box>
     </NativeBaseProvider>
   );
